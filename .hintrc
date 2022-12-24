@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "highest-available-document-mode": "off",
+    "axe/name-role-value": "off",
+    "axe/text-alternatives": "off",
+    "disown-opener": "off",
+    "axe/parsing": "off"
+  }
+}

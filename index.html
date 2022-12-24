@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="shortcut icon" type="image/png" href="img/log.png">
+
+    
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
+    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <title>GitHub Profile Finder</title>
+    <!--google console search engine----->
+    <script data-ad-client="ca-pub-2333600687947212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body class="bg-dark">
+        <nav id="main-nav" class="navbar navbar-dark bg-transparent mb-3 navbar-expand-sm">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                      <img class="img-fluid logo-width mr-1" src="img/log.png" > 
+                     <span class="logo-txt">
+                         Harmony2k<span class="logo-tex_1">2</span>k<span class="logo-txt_3">Git-Finder</span> 
+                    </span>
+                    </a>
+                    <button class="navbar-toggler nav-drop" data-toggle="collapse" data-target="#navbarCollapse">
+                        <i class="fas fa-align-center"></i>
+                     </button>
+                         <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto small-menu show">                     
+                        <li class="nav-item">
+                            <a class="nav-link text-warning" href="#contact" data-toggle="modal" data-target="#exampleModal">Contact Me</a>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+          
+            
+            <!--SHOWCASE-->
+<section id="showcase">
+        <div class="secondary-overlay text-white">
+            <div class="container">
+                <div class="row no-gutters">
+                   
+                    <div class="col col-12 col-md-5">
+                    <h1 class="display-6 pt-5 text-danger">
+                        <span class="text-white"> GitHub </span>  Profile Finder
+                    </h1>
+                     <p>One of the features of GitHub is the ability to search for repositories using the GitHub API. 
+                        The GitHub API allows developers to access the functionality of GitHub programmatically, including 
+                        the ability to search for repositories. With the GitHub API, developers can build applications that
+                         can search for repositories on GitHub and retrieve information about them, such as the repository's
+                          name, owner, and the number of forks and stars it has received. This can be useful for a variety of
+                           purposes, such as finding repositories that are relevant to a particular topic or analyzing trends 
+                           in repository popularity. </p>
+                     <div class="col col-12 col-md-8 d-none d-lg-block">
+                    <a href="#git-reposi" class="btn btn-danger btn-lg text-white">
+                        <i class="fa fa-arrow-down mx-2">&nbsp; Find Repos </i>
+                    </a>
+                        </div>
+                    </div>
+
+                    <div class="col col-12 col-md-7">
+                        <img class="img-fluid" src="img/log.png">
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+           
+            <div class="container">
+                <div class="row">    
+                    <div class="col col-12 col-md-6">
+                        <img  src="img/img1.PNG" class="img-width mr-3 my-4">
+                   </div>                   
+                    <div class="col col-12 col-md-6 mt-4 pt-4">
+                         <p class="text-white pg-text">GitHub Apps are the officially recommended way to integrate with GitHub because 
+                            they offer much more granular permissions to access data, although you can list both OAuth and GitHub Apps 
+                            in GitHub Marketplace.</p>   
+                    </div>               
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12 col-md-6 mt-4 pt-4">
+                         <p class="text-white pg-text">GitHub Apps have been the preferred way to integrate with GitHub for nearly a year.
+                             The advantages over regular OAuth apps include granular permissions, as well as tighter control over where 
+                             the Apps are installed. However, GitHub Apps could only integrate with GitHub using REST API calls.</p>   
+                    </div>
+                    <div class="col col-12 col-md-6">
+                        <img  src="img/img2.PNG" class="img-width mr-3 my-4">
+                   </div>
+                </div>
+            </div>
+
+    <div class="container searchContainer" id="git-reposi">
+        <div class="search card card-body">
+            <h1 class="text-white  text-uppercase text-center">Search <span class="text-danger">GitHub</span>Users</h1>
+            <p class="text-center text-danger">Enter a username to retrieve a user profile and a list of their repositories.</p>
+            <input type="text" id="searchUser" class="form-control" placeholder="Find GitHub Profile Name...">
+        </div>
+        <br>
+        <div id="profile"></div>
+    </div>
+    
+  <!--============= footer section   ====================-->
+  <section id="footer">
+        <div class="container-fluid wow jackInTheBox delay-1s bg-danger">
+           <div class="row text-center">
+               <hr>
+            <div class="col col-12 col-md-3 footer-logo">
+                    <span class="logo-txt">
+                            Harmony<span class="logo-tex_1">2</span>k <span class="logo-txt_3 text-dark">Git-Finder</span> 
+                            <p class="text-center">Copyright &copy; <img class="img-fluid logo-width mr-1" src="img/log.png"> </p>
+                       </span>
+                    <br>
+        
+               </div>
+               
+               <div class="col col-12 col-md-3 footer-text">
+              <h1 class="text-dark">GitHub Features</h1>
+                <p><a class="link_txt" href="https://developer.github.com/actions/">Git Action</a></p>
+                <p><a class="link_txt" href="https://developer.github.com/enterprise/2.20/apps/building-github-apps/">REST API</a></p>
+                <p><a class="link_txt" href="https://developer.github.com/enterprise/2.20/apps/building-github-apps/">GitHub Version</a></p>
+               </div>
+               
+                  
+               <div class="col col-12 col-md-3 footer-text">
+              <h1 class="text-dark"> Quick Content</h1>
+                   <p><i class="fa fa-phone-square"></i>+234 810097 478</p>
+                    <p><a class="link_txt" href="mailto:timenyindonkunu@gmail.com" >
+                         <i class="fa fa-envelope"></i>timenyindonkunu@gmail.com</a></p>           
+               </div>
+               
+                <div class="col col-12 col-md-3 footer-text">
+             <h1 class="text-dark">Our Social Media</h1>
+
+            <p>
+                <i class="fa fa-linkedin mr-2"></i><a class="link_txt" href="https://www.linkedin.com/in/timenyin-kunu-481322a8/" target="_blank">Linkedin</a>
+            </p>
+
+            <p>
+                <i class="fa fa-github mr-2"></i><a class="link_txt" href="https://www.linkedin.com/in/timenyin-kunu-481322a8/" target="_blank">GitHub</a>
+            </p>
+
+            <p>
+                <i class="fa fa-twitter mr-2"></i><a class="link_txt" href="https://www.linkedin.com/in/timenyin-kunu-481322a8/" target="_blank">Twitter</a>
+            </p>
+
+            </div>
+            </div>
+           </div>
+        </section> 
+
+
+
+  <!-- Modal -->
+  <div class="modal fade bg-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Get In Touch</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">User Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  </div>
+
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Drop A Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                  </div>
+               
+                <button type="submit" class="btn btn-danger">Submit</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/github.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

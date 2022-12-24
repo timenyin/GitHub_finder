@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Gorditas:400,700|Italianno|Nanum+Gothic+Coding|Seaweed+Script&display=swap');
+
+:root {
+    --mainDark: #08000f;
+    --mainGrey: #fdfcfc;
+    --mainRed:#d9534f;
+    --mainOrange:#ecc045;
+    --mainLowDark: #1a1e31;
+  }
+  /*
+  font-family: 'Nanum Gothic Coding', monospace;
+font-family: 'Italianno', cursive;
+font-family: 'Seaweed Script', cursive;
+font-family: 'Gorditas', cursive;
+  */
+  body {
+    font-family: 'Gorditas', cursive;
+        background:linear-gradient(to left,rgba(1, 10, 3, 0.61),
+      rgba(1, 10, 3, 0));
+        background-position:top;
+        background-attachment: fixed;
+        background-size: cover;
+        background-repeat:repeat;
+  }.nav-link{
+    font-size: 18px;
+  }
+ 
+  .logo-width{
+      width: 7% !important;
+      color: var(--mainRed);
+  }
+
+  .logo-txt {
+    font-family: 'Gorditas', cursive;
+    font-size: 700;
+    color: var(--mainGrey);
+  }
+  .logo-tex_1 {
+    color: var(--mainOrange);
+    font-size: 2.9rem;
+    font-family: 'Seaweed Script', cursive;
+  }
+
+  .logo-txt_3 {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    font-family: 'Nanum Gothic Coding', monospace;
+    color: var(--mainRed);
+  }
+
+  .img-width {
+      width:  73% !important;
+  }
+
+    .img-width_2 {
+        width: 73% !important;
+        margin-left: 100px;
+}
+  
+  .card {
+    background:linear-gradient(to right,rgba(1, 10, 3, 0),
+    rgba(1, 10, 3, 0));
+      background-position:top;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat:repeat; 
+    /*  margin-top: 30rem; */
+  }
+
+  .pg-text {  
+    font-size: 1.3rem;
+    padding-top: 6rem;
+  }
+
+  .pg-text_2 {
+    font-size: 1.3rem;
+    margin-left: 74px;
+    padding-top: 6rem;
+  }
+
+  .searchContainer{
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+  }
+  
+
+  footer {
+    background:linear-gradient(to right,rgba(1, 10, 3, 0),
+    rgba(1, 10, 3, 0)),url('../img/bg.PNG');
+      background-position:top;
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat:repeat;
+  }
+/*==============FOOTER SECTION =======================*/
+#footer{
+  margin-top: 20px;
+ background:linear-gradient(rgba(50, 16, 16, 0.6),rgba(50, 16, 16, 0.6)),
+ url('../img/background.jpeg');
+ background-position:top;
+ background-size: cover;
+ background-attachment: fixed;
+ background-repeat: no-repeat;
+ color: #012f7e;
+ z-index: 2;
+}
+
+.footer-logo {
+   width: 150px;
+   margin-top: 55px;
+   margin-bottom: 15px;
+   
+}
+
+.footer-logo img {
+   align-items: center;
+}
+
+.footer-logo h3{
+   font-size:18px;
+}
+
+.footer-text {
+    margin-top: 55px;
+}
+
+p{
+   padding: 5px;
+   margin: 5px;
+}
+
+#footer h1{
+   font-size: 18px;
+   text-align: left;
+   margin-bottom: 15px;
+   margin-top: 25px; 
+}
+
+.link_txt, .link_txt2:hover {
+  color: var(--mainGrey) !important;
+  text-decoration:none;
+}
+
+.link_txt2{
+  color: var(--mainOrange);
+}
+
+.link_txt:hover  {
+  color: var(--mainOrange) !important;
+  text-decoration:none;
+}
+
+
+
+
+#footer p{
+   font-size: 12px;
+   text-align: left;
+   color: var(--mainGrey);
+}
+
+#footer .row .fa{
+   padding-right: 7px;
+   font-size: 17px;
+  color: var(--mainLowDark);
+   
+}
+
+
+/*** Responsive Scrollbar For Small Devices Styles ***/
+
+/* @media (max-width: 991px){} */
+	
+::-webkit-scrollbar {
+  -webkit-appearance:none;
+}
+::-webkit-scrollbar:vertical {
+  width:12px;
+}
+
+
+::-webkit-scrollbar:horizontal {
+  height:12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:gray;
+  border-radius:10px;
+  border:1px solid #ffffff;
+}
+
+::-webkit-scrollbar-track {
+  border-radius:10px;
+  background-color:#ffffff;
+}
+
+  /* ==========OTHER SYLES ============= */
+
