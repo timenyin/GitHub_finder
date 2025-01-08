@@ -1,201 +1,367 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="shortcut icon" type="image/png" href="img/log.png">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
-    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/favicon/log.ico" type="image/x-icon">
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css">
+    <!-- Libs CSS -->
+    <link rel="stylesheet" href="assets/css/libs.bundle.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/theme.bundle.css">
     
+    <!-- Title -->
     <title>GitHub Profile Finder</title>
     <!--google console search engine----->
     <script data-ad-client="ca-pub-2333600687947212" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>
-<body class="bg-dark">
-        <nav id="main-nav" class="navbar navbar-dark bg-transparent mb-3 navbar-expand-sm">
-                <div class="container">
-                    <a class="navbar-brand" href="index.html">
-                      <img class="img-fluid logo-width mr-1" src="img/log.png" > 
-                     <span class="logo-txt">
-                         Harmony2k<span class="logo-tex_1">2</span>k<span class="logo-txt_3">Github-Finder</span> 
-                    </span>
-                    </a>
-                    <button class="navbar-toggler nav-drop" data-toggle="collapse" data-target="#navbarCollapse">
-                        <i class="fas fa-align-center"></i>
-                     </button>
-                         <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ml-auto small-menu show">                     
-                        <li class="nav-item">
-                            <a class="nav-link text-warning" href="#contact" data-toggle="modal" data-target="#exampleModal">Contact Me</a>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-            </nav>
-          
-            
-            <!--SHOWCASE-->
-<section id="showcase">
-        <div class="secondary-overlay text-white">
-            <div class="container">
-                <div class="row no-gutters">
-                   
-                    <div class="col col-12 col-md-5">
-                    <h1 class="display-6 pt-5 text-danger">
-                        <span class="text-white">  Empower </span>  your GitHub exploration with GitHub Finder! 
-                    </h1>
-                     <p>Welcome to GitHub Finder, your ultimate tool to quickly search and retrieve GitHub user profiles! Our web application leverages the power of Bootstrap, JavaScript, HTML, CSS3, and Node.js to bring you a seamless and efficient user experience.
-
-Simply enter a GitHub username, and our async function getGitHubProfile will fetch the user's profile information from the GitHub API. With a clean and intuitive design, GitHub Finder offers a user-friendly platform for exploring GitHub users and their projects.</p>
-                     <div class="col col-12 col-md-8 d-none d-lg-block">
-                    <a href="#git-reposi" class="btn btn-danger btn-lg text-white">
-                        <i class="fa fa-arrow-down mx-2">&nbsp; Find Repos </i>
-                    </a>
-                        </div>
-                    </div>
-
-                    <div class="col col-12 col-md-7">
-                        <img class="img-fluid" src="img/log.png">
-                    </div>
-                
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-           
-            <div class="container">
-                <div class="row">    
-                    <div class="col col-12 col-md-6">
-                        <img  src="img/img1.PNG" class="img-width mr-3 my-4">
-                   </div>                   
-                    <div class="col col-12 col-md-6 mt-4 pt-4">
-                         <p class="text-white pg-text">GitHub Apps are the officially recommended way to integrate with GitHub because 
-                            they offer much more granular permissions to access data, although you can list both OAuth and GitHub Apps 
-                            in GitHub Marketplace.</p>   
-                    </div>               
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col col-12 col-md-6 mt-4 pt-4">
-                         <p class="text-white pg-text">Experience the speed and responsiveness of our application as it dynamically loads and displays user data in real-time. Start discovering GitHub profiles effortlessly with GitHub Finder today!</p>   
-                    </div>
-                    <div class="col col-12 col-md-6">
-                        <img  src="img/img2.PNG" class="img-width mr-3 my-4">
-                   </div>
-                </div>
-            </div>
-
-    <div class="container searchContainer" id="git-reposi">
-        <div class="search card card-body">
-            <h1 class="text-white  text-uppercase text-center">Search <span class="text-danger">GitHub </span>  Users</h1>
-            <p class="text-center text-danger">Enter a username to retrieve a user profile and a list of their repositories.</p>
-            <input type="text" id="searchUser" class="form-control" placeholder="Find GitHub Profile Name...">
-        </div>
-        <br>
-        <div id="profile"></div>
-    </div>
     
-  <!--============= footer section ====================-->
-  <section id="footer">
-        <div class="container-fluid wow jackInTheBox delay-1s bg-danger">
-           <div class="row text-center">
-               <hr>
-            <div class="col col-12 col-md-3 footer-logo">
-                    <span class="logo-txt">
-                            Harmony<span class="logo-tex_1">2</span>k <span class="logo-txt_3 text-dark">Github-Finder</span> 
-                            <p class="text-center">Copyright &copy; <img class="img-fluid logo-width mr-1" src="img/log.png"> </p>
-                       </span>
-                    <br>
-        
-               </div>
-               
-               <div class="col col-12 col-md-3 footer-text">
-              <h1 class="text-dark">GitHub Features</h1>
-                <p><a class="link_txt" href="https://developer.github.com/actions/">Git Action</a></p>
-                <p><a class="link_txt" href="https://developer.github.com/enterprise/2.20/apps/building-github-apps/">REST API</a></p>
-                <p><a class="link_txt" href="https://developer.github.com/enterprise/2.20/apps/building-github-apps/">GitHub Version</a></p>
-               </div>
-               
-                  
-               <div class="col col-12 col-md-3 footer-text">
-              <h1 class="text-dark"> Quick Content</h1>
-                   <p><i class="fa fa-phone-square"></i>+234 810097 478</p>
-                    <p><a class="link_txt" href="mailto:timenyindonkunu@gmail.com" >
-                         <i class="fa fa-envelope"></i>timenyindonkunu@gmail.com</a></p>           
-               </div>
-               
-                <div class="col col-12 col-md-3 footer-text">
-             <h1 class="text-dark">Our Social Media</h1>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156446909-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-156446909-2");
+    
+    </script>
+  </head>
+  <style>
+    .list-group-item {
+  word-wrap: break-word; /* Ensure long words break to the next line */
+  overflow-wrap: break-word; /* For compatibility with all browsers */
+}
 
-            <p>
-                <i class="fa fa-linkedin mr-2"></i><a class="link_txt" href="https://www.linkedin.com/in/timenyin-kunu-481322a8/" target="_blank">Linkedin</a>
-            </p>
+a {
+  white-space: normal; /* Prevent text from staying on one line */
+  word-break: break-word; /* Allow breaking of long words */
+}
+  </style>
+  <body>
 
-            <p>
-                <i class="fa fa-github mr-2"></i><a class="link_txt" href="https://www.linkedin.com/in/timenyin-kunu-481322a8/" target="_blank">GitHub</a>
-            </p>
-
-            <p>
-                <i class="fa fa-twitter mr-2"></i><a class="link_txt" href="https://www.linkedin.com/in/timenyin-kunu-481322a8/" target="_blank">Twitter</a>
-            </p>
-
-            </div>
-            </div>
-           </div>
-        </section> 
-
-
-
-  <!-- Modal -->
-  <div class="modal fade bg-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Get In Touch</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">User Name</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
-                  </div>
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    <!-- Modal for Mail Us  -->
+     <!-- Signup: Horizontal  -->
+     <div class="modal fade" id="modalSignupHorizontal" tabindex="-1" role="dialog" aria-labelledby="modalSignupHorizontalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="card card-row">
+            <div class="row gx-0">
+              <div class="col-12 col-md-6 bg-cover card-img-start" style="background-image: url(assets/img/photos/photo-8.jpg);">
+    
+                <!-- Image (placeholder) -->
+                <img src="assets/img/photos/photo-8.jpg" alt="..." class="img-fluid d-md-none invisible">
+    
+                <!-- Shape -->
+                <div class="shape shape-end shape-fluid-y text-white d-none d-md-block">
+                  <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor"/></svg>            </div>
+    
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="card-body">
+    
+                  <!-- Close -->
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    
+                  <!-- Heading -->
+                  <h2 class="mb-0 fw-bold text-center" id="modalSignupHorizontalTitle">
+                    Contact Us
+                  </h2>
+    
+                  <!-- Text -->
+                  <p class="mb-6 text-center text-body-secondary">
+                    Drop a quick Message in minutes.
+                  </p>
+    
+                  <!-- Form -->
+                  <form id="cform" name="contact" netlify class="mb-6">
+    
+                    <!-- Email -->
+                    <div class="form-group">
+                      <label class="visually-hidden" for="modalSignupHorizontalEmail">
+                        Your email
+                      </label>
+                      <input name="email" type="email" class="form-control" id="modalSignupHorizontalEmail" style="border: 1px solid;" placeholder="Your email">
+                    </div>
+    
+                    <!-- Password -->
+                    <div class="form-group mb-5">
+                      <label class="visually-hidden" for="modalSignupHorizontalPassword">
+                       Drop Your Message
+                      </label>
+                      <textarea type="text" name="message" rows="5" class="form-control" style="border: 1px solid;" id="modalSignupHorizontalPassword" placeholder="Drop a Replay"></textarea>
+                    </div>
+    
+                    <!-- Submit -->
+                    <button class="btn w-100 btn-primary" type="submit">
+                      Send Message
+                    </button>
+    
+                  </form>
                 </div>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Drop A Message</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-                  </div>
-               
-                <button type="submit" class="btn btn-danger">Submit</button>
-              </form>
+              </div>
+    
+            </div> <!-- / .row -->
+          </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+    
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/log.png" class="navbar-brand-img" alt="...">
+           <span class="text-dark fw-bolder h5">GIT-FINDER</span> 
+        </a>
+    
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+    
+          <!-- Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fe fe-x"></i>
+          </button>
+  
+    
+          <!-- Button -->
+          <a class="navbar-btn btn btn-sm btn-dark lift ms-auto" data-bs-toggle="modal" href="#modalSignupHorizontal">
+            Mail Us
+          </a>
+        </div>
+        
+      </div>
+    </nav>
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <section class="position-relative py-8 py-md-11 mb-9 border-bottom">
+      <!-- Shape -->
+      <div class="shape shape-fluid-x shape-blur-1 text-gray-200">
+        <svg viewBox="0 0 723 569" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M703.969 241.602l-.006-.003C716.081 262.97 723 287.677 723 314c0 68.917-47.425 126.757-111.42 142.665L246.7 556.937C226.465 564.729 204.481 569 181.5 569 81.26 569 0 487.74 0 387.5c0-34.256 9.49-66.296 25.985-93.633l-.016.008L141.512 77.548C162.753 33.305 207.123 2.273 258.951.12l.008-.12h251.04l.003.01c41.848.557 78.081 24.378 96.356 59.12l.001-.005 97.61 182.477z" fill="currentColor"></path></svg>      </div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 order-md-2">
+
+            <!-- Image -->
+            <div class="img-skewed img-skewed-start mb-8 mb-md-0">
+              <img src="assets/img/screenshots/desktop/scrrengit.png" alt="..." class="screenshot img-fluid mw-md-130 aos-init aos-animate" data-aos="img-skewed-item-start" data-aos-delay="100">
+            </div>
+
+          </div>
+          <div class="col-12 col-md-6 order-md-1 aos-init aos-animate" data-aos="fade-up">
+
+            <!-- Heading -->
+            <!-- Preheader -->
+            <h6 class="text-uppercase text-primary" data-aos="fade-up">
+              Explore GitHub Users
+            </h6>
+          
+            <!-- Heading -->
+            <h1 class="display-3 fw-bold" data-aos="fade-up" data-aos-delay="50">
+              Discover Developers Globally.
+            </h1>
+          
+            <!-- Text -->
+            <p class="lead text-body-secondary mb-6" data-aos="fade-up" data-aos-delay="100">
+              Fetch details of GitHub users effortlessly with our interactive and intuitive platform.
+            </p>
+          
+            <!-- Button -->
+            <p class="mb-7 mb-md-9" data-aos="fade-up" data-aos-delay="150">
+              <a class="btn btn-primary shadow lift" data-scroll="" href="#gitInput">
+                Start Exploring <i class="fe fe-arrow-right ms-3"></i>
+              </a>
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+ 
+    <!-- ABOUT -->
+    <section class="py-8 py-md-11">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-12 col-md-6 img-skewed img-skewed-end">
+
+            <!-- Code -->
+            <div class="card rounded-lg bg-black mb-6 mb-md-0 img-skewed-item screenshot">
+              <div class="card-header border-white border-opacity-10">
+
+                <!-- Controls -->
+                <div class="d-flex">
+                  <span class="bg-danger rounded-circle" style="width: 10px; height: 10px;"></span>
+                  <span class="bg-warning rounded-circle ms-1" style="width: 10px; height: 10px;"></span>
+                  <span class="bg-success rounded-circle ms-1" style="width: 10px; height: 10px;"></span>
+                </div>
+
+              </div>
+              <div class="card-body">
+
+                <!-- Code -->
+                <code class="highlight" data-typed='{"backSpeed":2, "strings": ["&gt;&nbsp;$&nbsp;Search&nbsp;for your name<br/><span class=\"text-success\">Type&nbsp;your name&nbsp;in the search bar.</span><br/><br/>&gt;&nbsp;$&nbsp;Browse the results<br/><span class=\"text-success\">Explore the list of repositories&nbsp;associated with your name.</span><br/><span class=\"text-success\">Navigate to a &nbsp;repository</span><br/><span class=\"text-success\">Click on any repository to &nbsp;view its details.</span><br/><br/>&gt;&nbsp;$&nbsp;that&#x2019;s&nbsp;it<br/><span class=\"text-success\">Yup,&nbsp;it&#x2019;s&nbsp;that simple.</span>"]}' style="min-height: 183px;"></code>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-12 col-md-5">
+
+            <!-- Heading -->
+            <h2>
+              Access GitHub User Data & Repositories.
+            </h2>
+          
+            <!-- Text -->
+            <p class="fs-lg text-gray-700">
+              Fetch GitHub user profiles and repositories easily with our API.
+            </p>
+          
+            <!-- Link -->
+            <a class="fw-bold text-decoration-none" href="https://docs.github.com/en/rest" target="_blank">
+              Explore GitHub API <i class="fe fe-arrow-right ms-3"></i>
+            </a>
+          
+          </div>
+          
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- INTEGRATIONS -->
+    <section class="bg-black py-8 py-md-13">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10 col-lg-8 text-center">
+
+            <!-- Preheading -->
+            <h6 class="text-uppercase text-warning">By GIT-FINDER</h6>
+
+            <!-- Heading -->
+            <h1 class="fw-bold text-white">
+              GitHub   Users
+            </h1>
+
+            <!-- Text -->
+            <p class="fs-lg text-body-secondary mb-9">
+              Enter a username to retrieve a user profile and a list of their repositories.
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row">
+          <div class=" searchContainer" id="git-reposi">
+            <div id="gitInput" class="input-group input-group-lg Search">
+
+              <!-- Text -->
+              <span class="input-group-text border-0 pe-1">
+                <i class="fe fe-search"></i>
+              </span>
+
+              <!-- Input -->
+              <input  type="text" id="searchUser" class="form-control border-0 px-1" placeholder="Find GitHub Profile Name...">
+
+              <!-- Text -->
+              <span class="input-group-text border-0 py-0 ps-1 pe-3">
+                <a class="btn btn-sm btn-primary" href="blog-search.html">
+                  Search
+                </a>
+              </span>
+
+            </div>
+            <br>
+            <div id="profile"></div>
+        </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 py-md-11 bg-black  border-top border-warning border-top-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 col-lg-3">
+  
+            <!-- Brand -->
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/log.png" class="navbar-brand-img" alt="...">
+              <span class="text-white fw-bolder h5">GIT-FINDER</span>
+            </a>
+          
+            <!-- Text and Socials in the same line -->
+            <div class="d-flex align-items-center">
+              <!-- Text -->
+              <p class="text-gray-700 mb-0 me-3">
+                Follow on Socials.
+              </p>
+          
+              <!-- Social -->
+              <ul class="list-unstyled list-inline mb-0">
+                <li class="list-inline-item list-social-item me-3">
+                  <a href="https://twitter.com/harmony2k1" class="text-decoration-none">
+                    <img src="assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          
+          </div>
+          
+
+          <div class="col-6 col-md-10 col-lg-8">
+  
+            <!-- Section Heading -->
+            <h6 class="fw-bold text-uppercase text-gray-700 mb-2">
+              Terms and Conditions
+            </h6>
+          
+            <!-- Main Heading -->
+            <h4 class="fw-bold text-white mb-3">
+              This website is owned by 
+              <a href="https://www.harmony2k.cfd/" class="text-warning text-decoration-none h5">Harmony2k</a>
+            </h4>
+          
+            <!-- Description Text -->
+            <p class="fs-lg text-body-secondary mb-4">
+              Feel free to contact me for more information or any inquiries.
+            </p>
+          
+          </div>
+          
+          
+          
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <!-- Map JS -->
+    <script src='../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    
+    <!-- Vendor JS -->
+    <script src="assets/js/vendor.bundle.js"></script>
+    
+    <!-- Theme JS -->
+    <script src="assets/js/theme.bundle.js"></script>
+
+    <!-- Api -->
     <script src="js/github.js"></script>
     <script src="js/ui.js"></script>
     <script src="js/script.js"></script>
 
-</body>
+  </body>
 </html>
